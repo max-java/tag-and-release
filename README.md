@@ -58,6 +58,48 @@ git tag -f -a v.0.3-rc c396fed -m "Summary:
 git push -f --tags
 ```
 
+## Making release
+After ongoing development is finished and changes ready to be released:
+#### Code freaze - no new commits!
+* create a new branch from main for bumping version 
+```
+git checkout -b release-1.0.3
+```
+*  on version property remove the -SNAPSHOT suffix and make it simply versioned, e.g. 1.0.3. 
+* create a commit with corresponding message
+```
+git commit -m "Set version to 1.0.3"
+```
+* create a tag with a version to describe changes made since previos version in business terms (with or without point to specific commit, as it last commit need to be tagged), i.e.
+```
+git tag -a v.1.0.3 -m "Summary:
+* option 1
+* option 2
+```
+* push changes (both for commits and tags)
+```
+git push
+git push --tags
+```
+* Create merge-request on the main branch and merge changes
+* open tag on a github and verify it’s content
+* click on “Create release from tag” button 
+* click on “Generate release notes” button. It creates list of all merge requests betwen releases and link to comare source code between two versions. Send release name as corresponding version and add to the message Summary from the tag. 
 
+```
+## Summary:
+* files to save lot monthly logs saved to separate folder (VAL testing bug)
+* adds security headers (WAST Medium bug)
+* fixes path traverse bug (WAST High bug)
+* output page loading fix (performance optimization)
+
+## What's Changed
+* {merge request name 1} in {megre request link 1}
+* {merge request name 2} in {megre request link 2}
+** Full Changelog**: {url}/compare/v.1.0.2...v1.0.3
+```
+* Mark as latest release and save
+* Create merge request on release branch from main and once it reviewed - merge it.
+#### Release code freaze: continue development as usual
 
 
