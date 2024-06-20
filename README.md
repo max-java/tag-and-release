@@ -60,7 +60,7 @@ git push -f --tags
 
 ## Making release
 After ongoing development is finished and changes ready to be released:
-#### Code freaze - no new commits!
+#### Code freeze - no new commits!
 * create a new branch from main for bumping version 
 ```
 git checkout -b release-1.0.3
@@ -88,10 +88,8 @@ git push --tags
 
 ```
 ## Summary:
-* files to save lot monthly logs saved to separate folder (VAL testing bug)
-* adds security headers (WAST Medium bug)
-* fixes path traverse bug (WAST High bug)
-* output page loading fix (performance optimization)
+* option 1
+* option 2
 
 ## What's Changed
 * {merge request name 1} in {megre request link 1}
@@ -100,6 +98,6 @@ git push --tags
 ```
 * Mark as latest release and save
 * Create merge request on release branch from main and once it reviewed - merge it.
-#### Release code freaze: continue development as usual
+#### Release code freeze: continue development as usual
 
 
