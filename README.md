@@ -101,3 +101,4 @@ git push --tags
 #### Release code freeze: continue development as usual
 
 changes for feature 06
+changes for feature 07
